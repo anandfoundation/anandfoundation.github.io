@@ -188,6 +188,8 @@ footer{
     display:flex;
     align-items:center;
     gap:8px;
+    flex:1;
+    min-width:0;
   }
 
   .brand img{
@@ -195,8 +197,15 @@ footer{
     height:45px;
   }
 
+  .brand-text{
+    overflow:hidden;
+  }
+
   .brand-text h1{
     font-size:16px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 
   .tagline{
@@ -210,6 +219,7 @@ footer{
     padding:5px 10px;
     border-radius:6px;
     font-size:13px;
+    flex-shrink:0;
   }
 
   .nav-links{
