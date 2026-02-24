@@ -185,22 +185,26 @@ footer{
   }
 
   .header-row{
-    flex-direction:row;
+    display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-wrap:nowrap;   /* important */
   }
 
   .brand{
-    gap:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
   }
 
   .brand img{
-    width:50px;
-    height:50px;
+    width:45px;
+    height:45px;
   }
 
   .brand-text h1{
-    font-size:18px;
+    font-size:17px;
+    margin:0;
   }
 
   .tagline{
@@ -211,18 +215,20 @@ footer{
     display:block;
     background:#1e3a8a;
     color:white;
-    padding:6px 10px;
+    padding:5px 10px;
     border-radius:6px;
-    font-size:14px;
+    font-size:13px;
     white-space:nowrap;
   }
-
-  .nav-links{
+    .nav-links{
     display:none;
     flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
     width:100%;
     background:#1e3a8a;
-    margin-top:10px;
+    padding:10px 0;   /* reduced height */
   }
 
   .nav-links.show{
@@ -231,14 +237,14 @@ footer{
 
   .nav-links a{
     color:white;
-    padding:14px 0;
+    padding:12px 0;   /* smaller */
+    font-size:15px;   /* smaller */
     text-align:center;
-    font-size:16px;
     border-bottom:1px solid rgba(255,255,255,0.2);
   }
 
 }
-
+}
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
