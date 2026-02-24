@@ -115,6 +115,7 @@ body{
   display:none;
   font-size:28px;
   cursor:pointer;
+  white-space: nowrap;
 }
 
 /* ===== SLIDER ===== */
@@ -182,6 +183,16 @@ footer{
     position:relative;
   }
 
+  .brand-text h1{
+    font-size:18px;
+  }
+
+  .tagline{
+    font-size:12px;
+  }
+
+}
+
   .menu-toggle{
     display:block;
     background:#1e3a8a;
@@ -195,17 +206,17 @@ footer{
 }
   
 
-   .nav-links{
+  .nav-links{
     display:none;
     flex-direction:column;
     position:absolute;
     top:100%;
-    left:0;
-    width:100%;
+    left:50%;
+    transform:translateX(-50%);
+    width:100vw;
     background:#1e3a8a;
     padding:20px 0;
     z-index:9999;
-    transition:all 0.3s ease;
   }
 
   .nav-links a{
