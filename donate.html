@@ -89,7 +89,13 @@ html {
 const toggle = document.getElementById("menuToggle");
 const nav = document.getElementById("navbar");
 
-toggle.onclick = () => {
+toggle.addEventListener("click", () => {
   nav.classList.toggle("show");
-};
+
+  if(nav.classList.contains("show")){
+    toggle.textContent = "✖ बंद करा";
+  } else {
+    toggle.textContent = "☰ मुख्य सूची";
+  }
+});
 </script>
