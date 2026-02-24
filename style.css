@@ -26,6 +26,17 @@ body{
   justify-content:space-between;
 }
 
+.brand{
+  flex:1;
+}
+
+.nav-links{
+  flex:2;
+  display:flex;
+  justify-content:flex-end;
+  gap:28px;
+}
+
 .logo-area{
   display:flex;
   align-items:center;
@@ -42,6 +53,7 @@ body{
   display:flex;
   align-items:center;
   gap:12px;
+  flex-shrink:0;
 }
 
 .brand img{
@@ -67,6 +79,7 @@ body{
   display:flex;
   gap:28px;
   align-items:center;
+  white-space:nowrap; 
 }
 
 .nav-links a{
