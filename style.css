@@ -1,1 +1,39 @@
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #ff914d;
+  padding: 12px;
+}
 
+/* hamburger hidden desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav{
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    left:-100%;
+    width:250px;
+    height:100%;
+    background:#ff914d;
+    padding-top:80px;
+    transition:0.3s;
+  }
+
+  nav.show{
+    left:0;
+  }
+}
