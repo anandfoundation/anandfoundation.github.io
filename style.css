@@ -70,10 +70,26 @@ nav a:hover{
   position:absolute;
   width:100%;
   height:100%;
-  object-fit:cover;
-  object-position:center;
   opacity:0;
   transition:opacity 1s ease;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.slide-text{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  color:white;
+  font-size:28px;
+  font-weight:600;
+  text-align:center;
+  width:90%;
 }
 
 .slide.active{
@@ -112,6 +128,13 @@ footer{
     position:absolute;
     right:20px;
     top:25px;
+    z-index:1001;
+  }
+
+   .slide-text{
+    font-size:18px;
+    bottom:20px;
+    padding:0 15px;
   }
 
   nav{
@@ -124,6 +147,7 @@ footer{
     background:#fb923c;
     padding-top:80px;
     transition:0.3s;
+    z-index:1001;
   }
 
   nav.show{
