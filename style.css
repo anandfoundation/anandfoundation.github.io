@@ -99,28 +99,7 @@ nav a:hover{
   opacity:1;
 }
 
-/* ===== HERO TEXT ON IMAGES ===== */
-.hero-text{
-  position:absolute;
-  bottom:50px;
-  left:50%;
-  transform:translateX(-50%);
-  text-align:center;
-  color:white;
-  background:rgba(30,58,138,0.6);
-  padding:20px 30px;
-  border-radius:10px;
-}
 
-.hero-text h2{
-  margin:0;
-  font-size:28px;
-}
-
-.hero-text p{
-  margin-top:8px;
-  font-size:16px;
-}
 
 /* ===== PRERNA SECTION ===== */
 .prerna{
