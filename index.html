@@ -52,15 +52,18 @@ html {
 </div>
 
 <script>
-let slides = document.querySelectorAll(".slide");
-let i = 0;
-function startSlider(){
-slides.forEach(s => s.classList.remove("active"));
-slides[i].classList.add("active");
-i = (i + 1) % slides.length;
-}
-startSlider();
-setInterval(startSlider, 3500);
+document.addEventListener("DOMContentLoaded", function(){
+  let slides = document.querySelectorAll(".slide");
+  let i = 0;
+  function startSlider(){
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+    i = (i + 1) % slides.length;
+  }
+  startSlider();
+  setInterval(startSlider, 3500);
+
+});
 </script>
   
 <section class="prerna">
