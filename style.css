@@ -77,12 +77,13 @@ main{
   color:#1e3a8a;
   font-weight:700;
   letter-spacing:0.5px;
+  line-height:1.2;
 }
 
 .tagline{
  font-size:17px;
   color:#2563eb;
-  margin-top:3px;
+  margin-top:1px;
 }
 
 /* Desktop Navigation */
@@ -216,7 +217,7 @@ footer{
   }
 
   .tagline{
-    font-size:18px;
+    font-size:15px;
   }
 
   .menu-toggle{
