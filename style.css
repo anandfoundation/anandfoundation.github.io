@@ -16,8 +16,9 @@ body{
 /* ===== HEADER ===== */
 .main-header{
   background:white;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  box-shadow:0 2px 6px rgba(0,0,0,0.03);
   padding:10px 0;
+  border-bottom:1px solid #e5e7eb;  /* subtle line */
 }
 
 .header-row{
@@ -26,10 +27,6 @@ body{
   justify-content:space-between;
     position:relative;
   z-index:2001;
-}
-
-.brand{
-  flex:1;
 }
 
 .nav-links{
@@ -54,32 +51,33 @@ body{
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  flex-shrink:0;
+  gap:14px;
 }
 
 .brand img{
-  width:55px;
-  height:55px;
-  object-fit:cover;
+  width:65px;
+  height:65px;
   border-radius:50%;
 }
 
 .brand-text h1{
-  font-size:22px;
+  font-size:24px;
   margin:0;
   color:#1e3a8a;
+  font-weight:700;
+  letter-spacing:0.5px;
 }
 
 .tagline{
-  font-size:13px;
+ font-size:14px;
   color:#2563eb;
+  margin-top:3px;
 }
 
 /* Desktop Navigation */
 .nav-links{
   display:flex;
-  gap:28px;
+  gap:32px;
   align-items:center;
 }
 
@@ -88,11 +86,25 @@ body{
   color:#1e3a8a;
   font-weight:500;
   font-size:15px;
-  transition:0.3s;
+  padding-bottom:4px;
+  transition:0.3s ease;
+  position:relative;
 }
 
-.nav-links a:hover{
-  color:#2563eb;
+/* Modern underline hover */
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:#2563eb;
+  transition:0.3s ease;
+}
+
+.nav-links a:hover::after{
+  width:100%;
 }
 
 /* hamburger hidden on desktop */
