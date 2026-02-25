@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
 
+<header class="main-header">
+  <div class="container header-row">
+
+    <!-- Left: Brand -->
+    <div class="brand">
+      <img src="images/logo/logo.jpeg" alt="आनंद फाउंडेशन लोगो">
+      <div class="brand-text">
+        <h1>आनंद फाउंडेशन</h1>
+        <span class="tagline">मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</span>
+      </div>
+    </div>
+
+    <!-- Menu Button (Mobile) -->
+    <div class="menu-toggle" id="menuToggle">☰ मुख्य सूची</div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="nav-links">
+      <a href="index.html">मुख्यपृष्ठ</a>
+      <a href="about.html">संस्थेविषयी</a>
+      <a href="work.html">कार्य</a>
+      <a href="gallery.html">गॅलरी</a>
+      <a href="contact.html">संपर्क</a>
+      <a href="donate.html">आपण कशी मदत करू शकता?</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">गॅलरी</h2>
+
+    <div class="gallery-grid">
+      <img src="images/gallery/Img1.jpeg">
+      <img src="images/gallery/Img2.jpeg">
+      <img src="images/gallery/Img3.jpeg">
+      <img src="images/gallery/Img4.jpeg">
+      <img src="images/gallery/Img5.jpeg">
+      <img src="images/gallery/Img6.jpeg">
+      <img src="images/gallery/Img7.jpeg">
+      <img src="images/gallery/img8.jpeg">
+    </div>
+  </div>
+</section>
+  
+</main>
+
+
+<footer>
+  <p>© आनंद फाउंडेशन</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
+
+  if(nav.classList.contains("show")){
+    toggle.textContent = "✖ बंद करा";
+  } else {
+    toggle.textContent = "☰ मुख्य सूची";
+  }
+});
+</script>
+  
+</body>
+</html>
