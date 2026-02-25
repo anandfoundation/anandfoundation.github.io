@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+  <style>
+html {
+  scroll-behavior: smooth;
+}
+  </style>
+    
+<body>
+
+<header class="main-header">
+  <div class="container header-row">
+
+    <!-- Left: Brand -->
+    <div class="brand">
+      <img src="images/logo/logo.jpeg" alt="आनंद फाउंडेशन लोगो">
+      <div class="brand-text">
+        <h1>आनंद फाउंडेशन</h1>
+        <span class="tagline">मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</span>
+      </div>
+    </div>
+
+    <!-- Menu Button (Mobile) -->
+    <div class="menu-toggle" id="menuToggle">☰ मुख्य सूची</div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="nav-links">
+      <a href="index.html">मुख्यपृष्ठ</a>
+      <a href="about.html">संस्थेविषयी</a>
+      <a href="work.html">कार्य</a>
+      <a href="gallery.html">गॅलरी</a>
+      <a href="contact.html">संपर्क</a>
+      <a href="donate.html">आपण कशी मदत करू शकता?</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">संपर्क</h2>
+
+    <p><strong>पत्ता:</strong> लष्करवाडी, वरदविनायक मंदिराजवळ, जालगाव दापोली</p>
+    <p><strong>फोन:</strong> ०२३५८-२८४२१२/ ९४२२४४३९१४/ ९९२२३३५३२६</p>
+    <p><strong>ईमेल:</strong> anandfoundationdapoli@email.com</p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.9616921813126!2d73.19141957586208!3d17.746444083203297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be9c301fedb3405%3A0x32156eb5752bdcaf!2zVmFyYWQgVmluYXlhayBNYW5kaXIg4KS14KSw4KSmIOCkteCkv-CkqOCkvuCkr-CklSDgpK7gpILgpKbgpL_gpLA!5e0!3m2!1sen!2sin!4v1771905545129!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    
+  </iframe>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© आनंद फाउंडेशन</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
+
+  if(nav.classList.contains("show")){
+    toggle.textContent = "✖ बंद करा";
+  } else {
+    toggle.textContent = "☰ मुख्य सूची";
+  }
+});
+</script>
+    
+ </body>
+    </html>
