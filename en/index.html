@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+  
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("includes/header-mr.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+
+  
+<div class="slider">
+<img class="slide active" src="images/slider/school.jpeg">
+<img class="slide" src="images/slider/slide2.jpeg">
+<img class="slide" src="images/slider/slide3.jpeg">
+<img class="slide" src="images/slider/slide4.jpeg">
+  
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  let slides = document.querySelectorAll(".slide");
+  let i = 0;
+  function startSlider(){
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+    i = (i + 1) % slides.length;
+  }
+  startSlider();
+  setInterval(startSlider, 3500);
+
+});
+</script>
+  
+<section class="prerna">
+<div style="max-width:900px; margin:auto;">
+<h2 style="text-align:center; margin-bottom:20px;">आमची प्रेरणा</h2>
+<p>
+१५ ऑगस्ट २०२१ रोजी ‘आनंद फाउंडेशन’ या संस्थेची स्थापना करून बहुविकलांग व मतिमंद मुलांसाठी शिक्षण आणि पुनर्वसन केंद्र सुरू करण्यात आले. संस्थेचे अनेक उद्देश असले तरी दिव्यांग बांधवांच्या सर्वांगीण विकासासाठी कार्य करणे हेच आमचे प्रमुख ध्येय आहे.
+</p>
+<p>
+समाजातील विशेष घटकांकडे अनेकदा दुर्लक्ष होते. प्रत्येक माणूस कितीही अडचणींना सामोरा गेला तरी आपल्या ध्येयापर्यंत पोहोचण्याचा प्रयत्न करत असतो. मात्र समाजातील काही घटक असे आहेत ज्यांना अतिरिक्त सहकार्याची गरज असते — आणि हीच जाणीव आनंद फाउंडेशनच्या कार्यामागची प्रेरणा आहे.
+</p>
+<p>
+मतिमंद व बहुविकलांग विद्यार्थ्यांचा बौद्धिक विकास नेहमीच सहज होत नाही. त्यांच्यात काहीतरी करण्याची इच्छा असते, आनंदाने जगण्याची उमेद असते, खेळण्याची व व्यक्त होण्याची भावना असते; परंतु योग्य मार्गदर्शन, आधार आणि सातत्यपूर्ण सहकार्याशिवाय हे शक्य होत नाही.
+</p>
+<p>
+या विद्यार्थ्यांसाठी आई-वडील हे मोठे आधार असतात; तरीही त्यांचे आयुष्य अधिक सक्षम व स्वावलंबी करण्यासाठी विशेष शिक्षण, पुनर्वसन आणि कौशल्य प्रशिक्षणाची आवश्यकता असते. अशा प्रशिक्षणातून त्यांच्या स्वप्नांना आकार मिळतो आणि त्यांच्या जीवनात सकारात्मक बदल घडतो.
+</p>
+<p>
+रत्नागिरी जिल्ह्यातील दापोली परिसरात कार्यरत आनंद फाउंडेशन हे विद्यार्थ्यांच्या संपूर्ण पुनर्वसनासाठी सातत्याने प्रयत्नशील आहे. हे केवळ शिक्षण देणारे केंद्र नसून विद्यार्थ्यांच्या सन्मानपूर्वक, आनंदी आणि स्वावलंबी जीवनासाठी चाललेले एक समर्पित सामाजिक कार्य आहे.
+</p>
+</div>
+</section>
+  
+<section class="work-section">
+  <div class="container">
+    <h2>आमचे कार्य</h2>
+
+    <ul>
+      <li>विशेष शिक्षण</li>
+      <li>पुनर्वसन प्रशिक्षण</li>
+      <li>पालक मार्गदर्शन</li>
+    </ul>
+
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<div id="footer"></div>
+
+<script>
+fetch("includes/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
