@@ -1,20 +1,14 @@
-document.addEventListener("click", function (e) {
-
-  const toggle = document.getElementById("menuToggle");
+function toggleMenu() {
   const navbar = document.getElementById("navbar");
+  const toggle = document.querySelector(".menu-toggle");
 
-  if (!toggle || !navbar) return;
+  if (!navbar || !toggle) return;
 
-  if (toggle.contains(e.target)) {
+  navbar.classList.toggle("active");
 
-    navbar.classList.toggle("active");
-
-    if (navbar.classList.contains("active")) {
-      toggle.innerHTML = '<span class="hamburger"></span> X बंद करा';
-    } else {
-      toggle.innerHTML = '<span class="hamburger"></span> ☰ मुख्य सूची';
-    }
-
+  if (navbar.classList.contains("active")) {
+    toggle.innerHTML = '<span class="hamburger"></span> X बंद करा';
+  } else {
+    toggle.innerHTML = '<span class="hamburger"></span> ☰ मुख्य सूची';
   }
-
-});
+}
