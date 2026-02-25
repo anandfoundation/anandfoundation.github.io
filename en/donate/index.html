@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+  
+<body>
+  
+<div id="header"></div>
+<script>
+fetch("/includes/header-mr.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+
+  
+  <main>
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">आपण कशी मदत करू शकता</h2>
+
+    <p>
+    आनंद फाउंडेशन हे समाजाच्या सहकार्यावर चालणारे कार्य आहे. विशेष मुलांच्या सर्वांगीण विकासासाठी आपल्या वेळेची, कौशल्याची व सहकार्याची आवश्यकता आहे. प्रत्येक छोटा हातभार त्यांच्या आयुष्यात मोठा बदल घडवू शकतो.
+    </p>
+
+    <h3>१. वेळ व कौशल्य देणगी</h3>
+    <ul>
+      <li>मुलांसोबत वेळ घालवणे व उपक्रमांमध्ये सहभागी होणे</li>
+      <li>विशेष शिक्षण किंवा व्यावसायिक प्रशिक्षण देणे</li>
+      <li>पालक मार्गदर्शन व समुपदेशन</li>
+    </ul>
+
+    <h3>२. वस्तूरूप मदत</h3>
+    <ul>
+      <li>शैक्षणिक साहित्य (पुस्तके, वही, स्टेशनरी)</li>
+      <li>जुने पण स्वच्छ कपडे</li>
+      <li>कौशल्य प्रशिक्षणासाठी लागणारा कच्चा माल</li>
+      <li>व्हीलचेअर, वॉकर व इतर सहाय्यक उपकरणे</li>
+    </ul>
+
+    <h3>३. आर्थिक सहकार्य</h3>
+    <ul>
+      <li>एकरकमी देणगी</li>
+      <li>मासिक देणगी योजना</li>
+      <li>एका विद्यार्थ्याचे प्रायोजकत्व स्वीकारणे</li>
+    </ul>
+
+    <p style="margin-top:20px;">
+      आपल्या सहकार्यामुळे या मुलांचे भविष्य अधिक सुरक्षित, आत्मनिर्भर व आनंदी होऊ शकते.
+    </p>
+
+  </div>
+</section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
