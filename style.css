@@ -132,7 +132,9 @@ main{
 .header-lang{
   margin-left:0;
 }
-
+.header-lang::before{
+  content:"🌐 ";
+}
 .nav-links a{
   text-decoration:none;
   color:#1e3a8a;
