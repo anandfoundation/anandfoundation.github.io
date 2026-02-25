@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>आनंद फाउंडेशन</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
+  <title>Gallery - Anand Foundation</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../../style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
 
+<!-- Header -->
 <div id="header"></div>
+
 <script>
-fetch("/includes/header-mr.html")
+fetch("../../includes/header-en.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -24,37 +29,38 @@ fetch("/includes/header-mr.html")
 </script>
 
 <main>
-<section class="prerna">
-  <div class="container">
-    <h2 style="text-align:center;">गॅलरी</h2>
+  <section class="prerna">
+    <div class="container">
+      <h2 style="text-align:center;">Gallery</h2>
 
-    <div class="gallery-grid">
-      <img src="/images/gallery/Img1.jpeg">
-      <img src="/images/gallery/Img2.jpeg">
-      <img src="/images/gallery/Img3.jpeg">
-      <img src="/images/gallery/Img4.jpeg">
-      <img src="/images/gallery/Img5.jpeg">
-      <img src="/images/gallery/Img6.jpeg">
-      <img src="/images/gallery/Img7.jpeg">
-      <img src="/images/gallery/img8.jpeg">
+      <div class="gallery-grid">
+        <img src="../../images/gallery/Img1.jpeg" alt="Students Activity 1">
+        <img src="../../images/gallery/Img2.jpeg" alt="Students Activity 2">
+        <img src="../../images/gallery/Img3.jpeg" alt="Students Activity 3">
+        <img src="../../images/gallery/Img4.jpeg" alt="Students Activity 4">
+        <img src="../../images/gallery/Img5.jpeg" alt="Students Activity 5">
+        <img src="../../images/gallery/Img6.jpeg" alt="Students Activity 6">
+        <img src="../../images/gallery/Img7.jpeg" alt="Students Activity 7">
+        <img src="../../images/gallery/img8.jpeg" alt="Students Activity 8">
+      </div>
+
     </div>
-  </div>
-</section>
-  
+  </section>
 </main>
 
-
+<!-- Footer -->
 <div id="footer"></div>
+
 <script>
-fetch("/includes/footer.html")
+fetch("../../includes/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
 </script>
 
+<!-- Main JS -->
+<script src="../../js/main.js"></script>
 
-<script src="/js/main.js"></script>
-  
 </body>
 </html>
