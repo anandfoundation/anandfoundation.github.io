@@ -163,6 +163,11 @@ main{ flex:1; }
   left:0;
 }
 
+.close-icon{
+  font-size:18px;
+  font-weight:bold;
+}
+
 .hamburger::before{ top:-6px; }
 .hamburger::after{ top:6px; }
 
