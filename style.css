@@ -231,12 +231,13 @@ footer{
     align-items:start;
   }
 
-  .header-controls{
+   .header-controls{
     display:flex;
     flex-direction:column;
     align-items:flex-end;
     gap:8px;
   }
+
 
   .brand{
     display:flex;
@@ -261,19 +262,24 @@ footer{
     font-size:15px;
   }
 
-  .menu-toggle{
-  display:block;
-  background:#1e3a8a;
-  color:white;
-  padding:6px 10px;
-  border-radius:6px;
-  font-size:14px;
-  justify-self:end;
-  width:auto;          /* important */
-  min-width:85px;      /* remove forced width */
-  text-align:center; 
-  white-space:nowrap;
-}
+.menu-toggle,
+  .header-lang{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+
+    background:#1e3a8a;
+    color:white;
+    padding:6px 12px;
+    border-radius:6px;
+    font-size:14px;
+
+    width:85px;     /* SAME WIDTH */
+    height:36px;     /* SAME HEIGHT */
+    text-align:center;
+  }
+
 
   .header-lang{
     background:#1e3a8a;
