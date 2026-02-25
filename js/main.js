@@ -12,13 +12,19 @@ function toggleMenu() {
     toggle.innerHTML = '<span class="hamburger"></span> मुख्य सूची';
   }
 }
-function switchToMarathi() {
+function switchToMarathi(event) {
+  event.preventDefault();
+
   const currentPath = window.location.pathname;
-  const marathiPath = currentPath.replace(/^\/en/, "");
-  window.location.href = marathiPath || "/";
+  const marathiPath = currentPath.replace(/^\/en/, "") || "/";
+
+  window.location.href = marathiPath;
 }
-function switchToEnglish() {
+function switchToEnglish(event) {
+  event.preventDefault();
+
   const currentPath = window.location.pathname;
   const englishPath = "/en" + (currentPath === "/" ? "/" : currentPath);
+
   window.location.href = englishPath;
 }
