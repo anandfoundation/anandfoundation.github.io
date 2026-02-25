@@ -12,42 +12,18 @@ html {
 }
 </style>
 </head>
+  
 <body>
 
-<header class="main-header">
-  <div class="container header-row">
+<div id="header"></div>
 
-    <!-- Left: Brand -->
-    <div class="brand">
-      <img src="/images/logo/logo.jpeg" alt="आनंद फाउंडेशन लोगो">
-      <div class="brand-text">
-        <h1>आनंद फाउंडेशन</h1>
-        <span class="tagline">
-          मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र
-        </span>
-      </div>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="menu-toggle" id="menuToggle">
-      ☰ मुख्य सूची
-    </div>
-
-    <!-- Navigation -->
-    <nav id="navbar" class="nav-links">
-      <a href="/">मुख्यपृष्ठ</a>
-      <a href="/about/">संस्थेविषयी</a>
-      <a href="/work/">कार्य</a>
-      <a href="/gallery/">गॅलरी</a>
-      <a href="/contact/">संपर्क</a>
-      <a href="/donate/">आपण कशी मदत करू शकता?</a>
-
-      <!-- English Button -->
-      <a href="/en/" class="lang-btn">English</a>
-    </nav>
-
-  </div>
-</header>
+<script>
+fetch("includes/header-mr.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 
   
 <div class="slider">
@@ -109,15 +85,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 <div id="footer"></div>
 
+<div id="footer"></div>
+
 <script>
-fetch("/includes/footer.html")
+fetch("includes/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
 </script>
 
-  <script src="/js/main.js"></script>
-  
+<script src="js/main.js"></script>
 </body>
 </html>
