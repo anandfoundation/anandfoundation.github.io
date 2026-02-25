@@ -8,9 +8,9 @@ document.addEventListener("click", function (e) {
       navbar.classList.toggle("active");
 
       if (navbar.classList.contains("active")) {
-        e.target.textContent = "बंद करा";
+        e.target.textContent = "X बंद करा";
       } else {
-        e.target.textContent = "मुख्य सूची";
+        e.target.textContent = "☰ मुख्य सूची";
       }
     }
   }
