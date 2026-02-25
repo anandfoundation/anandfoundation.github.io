@@ -18,7 +18,7 @@ html {
 <div id="header"></div>
 
 <script>
-fetch("includes/header-mr.html")
+fetch("/includes/header-mr.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -46,14 +46,14 @@ fetch("includes/header-mr.html")
 <div id="footer"></div>
 
 <script>
-fetch("includes/footer.html")
+fetch("/includes/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
 </script>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
  </body>
     </html>
