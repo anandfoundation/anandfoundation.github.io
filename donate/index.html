@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+  
+<body>
+<header class="main-header">
+  <div class="container header-row">
+
+    <!-- Left: Brand -->
+    <div class="brand">
+      <img src="images/logo/logo.jpeg" alt="आनंद फाउंडेशन लोगो">
+      <div class="brand-text">
+        <h1>आनंद फाउंडेशन</h1>
+        <span class="tagline">मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</span>
+      </div>
+    </div>
+
+    <!-- Menu Button (Mobile) -->
+    <div class="menu-toggle" id="menuToggle">☰ मुख्य सूची</div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="nav-links">
+      <a href="index.html">मुख्यपृष्ठ</a>
+      <a href="about.html">संस्थेविषयी</a>
+      <a href="work.html">कार्य</a>
+      <a href="gallery.html">गॅलरी</a>
+      <a href="contact.html">संपर्क</a>
+      <a href="donate.html">आपण कशी मदत करू शकता?</a>
+    </nav>
+
+  </div>
+</header>
+
+  <main>
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">आपण कशी मदत करू शकता</h2>
+
+    <p>
+    आनंद फाउंडेशन हे समाजाच्या सहकार्यावर चालणारे कार्य आहे. विशेष मुलांच्या सर्वांगीण विकासासाठी आपल्या वेळेची, कौशल्याची व सहकार्याची आवश्यकता आहे. प्रत्येक छोटा हातभार त्यांच्या आयुष्यात मोठा बदल घडवू शकतो.
+    </p>
+
+    <h3>१. वेळ व कौशल्य देणगी</h3>
+    <ul>
+      <li>मुलांसोबत वेळ घालवणे व उपक्रमांमध्ये सहभागी होणे</li>
+      <li>विशेष शिक्षण किंवा व्यावसायिक प्रशिक्षण देणे</li>
+      <li>पालक मार्गदर्शन व समुपदेशन</li>
+    </ul>
+
+    <h3>२. वस्तूरूप मदत</h3>
+    <ul>
+      <li>शैक्षणिक साहित्य (पुस्तके, वही, स्टेशनरी)</li>
+      <li>जुने पण स्वच्छ कपडे</li>
+      <li>कौशल्य प्रशिक्षणासाठी लागणारा कच्चा माल</li>
+      <li>व्हीलचेअर, वॉकर व इतर सहाय्यक उपकरणे</li>
+    </ul>
+
+    <h3>३. आर्थिक सहकार्य</h3>
+    <ul>
+      <li>एकरकमी देणगी</li>
+      <li>मासिक देणगी योजना</li>
+      <li>एका विद्यार्थ्याचे प्रायोजकत्व स्वीकारणे</li>
+    </ul>
+
+    <p style="margin-top:20px;">
+      आपल्या सहकार्यामुळे या मुलांचे भविष्य अधिक सुरक्षित, आत्मनिर्भर व आनंदी होऊ शकते.
+    </p>
+
+  </div>
+</section>
+</main>
+
+
+<footer>
+  <p>© आनंद फाउंडेशन</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
+
+  if(nav.classList.contains("show")){
+    toggle.textContent = "✖ बंद करा";
+  } else {
+    toggle.textContent = "☰ मुख्य सूची";
+  }
+});
+</script>
+
+</body>
+</html>
