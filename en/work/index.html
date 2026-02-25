@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+  
+<body>
+
+<div id="header"></div>
+<script>
+fetch("/includes/header-mr.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+
+  <main>
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">आमचे कार्य</h2>
+
+    <p>
+      <li>विशेष शिक्षण व वैयक्तिक विकास प्रशिक्षण</li>
+      <li>बौद्धिक व शारीरिक क्षमतेनुसार कौशल्य विकास</li>
+      <li>व्यावसायिक प्रशिक्षण कार्यक्रम</li>
+      <li>पालकांसाठी मार्गदर्शन व समुपदेशन</li>
+      <li>नवोपक्रम व सामाजिक सहभाग उपक्रम</li>
+      <li>मुलांसाठी सहली व प्रोत्साहनपर कार्यक्रम</li>
+  </p>
+
+  </div>
+</section>
+</main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/includes/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
