@@ -7,7 +7,7 @@ function toggleMenu() {
   navbar.classList.toggle("active");
 
   if (navbar.classList.contains("active")) {
-    toggle.innerHTML = '<span class="hamburger"></span> X बंद करा';
+    toggle.innerHTML = '<span class="close-icon">✕</span> बंद करा';
   } else {
     toggle.innerHTML = '<span class="hamburger"></span> मुख्य सूची';
   }
