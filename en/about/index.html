@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>आनंद फाउंडेशन</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-html {
-  scroll-behavior: smooth;}
-</style>
+  <title>About Us - Anand Foundation</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../../style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
 
+<!-- Header -->
 <div id="header"></div>
 
 <script>
-fetch("/includes/header-mr.html")
+fetch("../../includes/header-en.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
   });
 </script>
 
-  <main>
-<section class="prerna">
-  <div class="container">
-    <h2 style="text-align:center;">संस्थेविषयी</h2>
+<main>
+  <section class="prerna">
+    <div class="container">
+      <h2 style="text-align:center;">About Us</h2>
 
-    <p>
-    १५ ऑगस्ट २०२१ रोजी स्थापन झालेल्या ‘आनंद फाउंडेशन’ या संस्थेचे उद्दिष्ट बहुविकलांग व मतिमंद मुलांसाठी शिक्षण व पुनर्वसनाची संधी उपलब्ध करून देणे हे आहे. समाजातील या विशेष घटकांकडे अनेकदा दुर्लक्ष होते; परंतु प्रत्येक मुलामध्ये स्वप्न पाहण्याची क्षमता, आनंदाने जगण्याची इच्छा आणि काहीतरी करण्याची जिद्द असते. योग्य मार्गदर्शन, सातत्यपूर्ण प्रशिक्षण आणि प्रेमळ आधार मिळाल्यास ही मुले स्वावलंबनाकडे वाटचाल करू शकतात — याच विश्वासातून या संस्थेची स्थापना झाली.
-    </p>
+      <p>
+        Established on 15 August 2021, Anand Foundation aims to provide educational and rehabilitation opportunities for children with multiple and intellectual disabilities. Special sections of society are often overlooked; however, every child has the ability to dream, the desire to live joyfully, and the determination to achieve something meaningful. With proper guidance, consistent training, and compassionate support, these children can move toward independence — and it is with this belief that the foundation was established.
+      </p>
 
-    <p>
-    रत्नागिरी जिल्ह्यातील दापोली परिसरात कार्यरत असलेले हे केंद्र केवळ शिक्षणापुरते मर्यादित नसून विद्यार्थ्यांच्या बौद्धिक, शारीरिक व सामाजिक विकासासाठी सातत्याने प्रयत्नशील आहे. पालक मार्गदर्शन, व्यावसायिक प्रशिक्षण आणि पुनर्वसनाच्या माध्यमातून प्रत्येक विद्यार्थ्याला सन्मानपूर्वक आणि आत्मविश्वासाने जीवन जगता यावे, हेच आनंद फाउंडेशनचे ध्येय आहे.
-    </p>
+      <p>
+        Operating in the Dapoli region of Ratnagiri district, the center is not limited to education alone. It continuously works toward the intellectual, physical, and social development of its students. Through parent guidance, vocational training, and rehabilitation programs, Anand Foundation strives to ensure that every student can live a life of dignity, confidence, and self-reliance.
+      </p>
 
-  </div>
-</section>
-  </main>
+    </div>
+  </section>
+</main>
 
+<!-- Footer -->
 <div id="footer"></div>
 
 <script>
-fetch("/includes/footer.html")
+fetch("../../includes/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
   });
 </script>
-  <script src="/js/main.js"></script>
-  
+
+<!-- Main JS -->
+<script src="../../js/main.js"></script>
+
 </body>
 </html>
