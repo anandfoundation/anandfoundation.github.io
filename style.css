@@ -253,16 +253,27 @@ footer{
   }
 
   .menu-toggle{
-    display:block;
-    background:#1e3a8a;
-    color:white;
-    padding:6px 12px;
-    border-radius:6px;
-    font-size:14px;
-    justify-self:end;
-    min-width:120px;
-    text-align:center;
-  }
+  display:block;
+  background:#1e3a8a;
+  color:white;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:14px;
+  justify-self:end;
+  width:auto;          /* important */
+  min-width:140px;      /* remove forced width */
+  white-space:nowrap;
+}
+  .nav-links .lang-btn{
+  border-bottom:none;     /* remove line */
+  background:#ffffff;     /* white button */
+  color:#1e3a8a;          /* blue text */
+  font-weight:600;
+  padding:8px 14px;
+  border-radius:6px;
+  margin:15px auto;
+  width:auto;
+}
 
   .nav-links{
     display:none;
