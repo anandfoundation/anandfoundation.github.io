@@ -17,50 +17,30 @@ body{
   min-height:100vh;
 }
 
-main{
-  flex:1;
-}
+main{ flex:1; }
 
 .container{
   width:100%;
-  max-width:1250px;   /* increased to prevent wrapping */
+  max-width:1250px;
   margin:auto;
   padding:0 20px;
-  box-sizing:border-box;
-}
-
-/* ==== amche karya on home page ==== */
-.work-section {
-  padding:60px 0;
-}
-
-.work-section h2 {
-  text-align:center;
-  margin-bottom:25px;
-}
-
-.work-section ul {
-  max-width:600px;
-  margin:0 auto;
-  padding-left:20px;
 }
 
 /* ===== HEADER ===== */
 
 .main-header{
   background:white;
-  box-shadow:0 2px 6px rgba(0,0,0,0.03);
-  padding:10px 0;
   border-bottom:1px solid #e5e7eb;
+  box-shadow:0 2px 6px rgba(0,0,0,0.03);
   position:relative;
-  z-index:10000;
+  z-index:1000;
 }
 
+/* Top row */
 .header-row{
   display:flex;
   align-items:center;
-  gap:30px;
-  position:relative;
+  padding:10px 0;
 }
 
 /* Brand */
@@ -89,7 +69,7 @@ main{
   color:#2563eb;
 }
 
-/* Right section (English + Suchi) */
+/* Right section */
 .header-right{
   margin-left:auto;
   display:flex;
@@ -105,52 +85,88 @@ main{
   border-radius:6px;
   font-size:14px;
   text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
 }
 
-/* REMOVE underline animation ONLY for English */
+.header-lang::before{
+  content:"🌐 ";
+}
+
+/* Remove underline animation for English */
 .header-lang::after{
   display:none !important;
 }
 
-/* Navigation */
+/* Hamburger / Suchi button */
+.menu-toggle{
+  display:none;
+  align-items:center;
+  gap:8px;
+  background:#1e3a8a;
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+  font-size:14px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+/* 3-line hamburger icon */
+.hamburger{
+  width:18px;
+  height:2px;
+  background:white;
+  position:relative;
+}
+
+.hamburger::before,
+.hamburger::after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:2px;
+  background:white;
+  left:0;
+}
+
+.hamburger::before{ top:-6px; }
+.hamburger::after{ top:6px; }
+
+/* Navigation Desktop */
 .nav-links{
   display:flex;
-  gap:22px;
-  margin-left:40px;
+  justify-content:center;
+  gap:25px;
+  padding:10px 0;
 }
 
 .nav-links a{
   text-decoration:none;
   color:#1e3a8a;
-  font-weight:500;
   font-size:19px;
   position:relative;
   white-space:nowrap;
 }
 
-/* underline hover */
+/* Hover underline (nav only) */
 .nav-links a::after{
   content:"";
   position:absolute;
   left:0;
-  bottom:-3px;
+  bottom:-4px;
   width:0%;
   height:2px;
   background:#2563eb;
-  transition:0.3s ease;
+  transition:0.3s;
 }
 
 .nav-links a:hover::after{
   width:100%;
 }
 
-/* hamburger hidden on desktop */
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-}
-
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
@@ -166,24 +182,25 @@ main{
     gap:8px;
   }
 
-  .menu-toggle,
-  .header-lang{
+  .menu-toggle{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    width:85px;
+    width:110px;
     height:36px;
-    font-size:14px;
+    justify-content:center;
   }
 
+  .header-lang{
+    width:110px;
+    height:36px;
+    padding:0;
+  }
+
+  /* Dropdown */
   .nav-links{
     display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#1e3a8a;
     flex-direction:column;
+    background:#1e3a8a;
+    width:100%;
   }
 
   .nav-links.active{
@@ -194,55 +211,6 @@ main{
     color:white;
     padding:12px 0;
     text-align:center;
-    font-size:16px;
-    border-bottom:1px solid rgba(255,255,255,0.2);
-  }
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-  .header-row{
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:start;
-  }
-
-  .header-right{
-    flex-direction:column;
-    align-items:flex-end;
-    gap:8px;
-  }
-
-  .menu-toggle,
-  .header-lang{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:85px;
-    height:36px;
-    font-size:14px;
-  }
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#1e3a8a;
-    flex-direction:column;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-links a{
-    color:white;
-    padding:12px 0;
-    text-align:center;
-    font-size:16px;
     border-bottom:1px solid rgba(255,255,255,0.2);
   }
 }
@@ -253,7 +221,6 @@ main{
   width:100%;
   height:420px;
   overflow:hidden;
-  z-index:1;
 }
 
 .slide{
@@ -265,9 +232,7 @@ main{
   transition:opacity 1s ease;
 }
 
-.slide.active{
-  opacity:1;
-}
+.slide.active{ opacity:1; }
 
 .slide-text{
   position:absolute;
@@ -301,87 +266,6 @@ footer{
   color:white;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-  .header-row{
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:start;
-  }
-
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    min-width:0;
-  }
-
-  .brand img{
-    width:45px;
-    height:45px;
-  }
-
-  .brand-text h1{
-    font-size:30px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-  }
-
-  .tagline{
-    font-size:15px;
-  }
-
-  .menu-toggle,
-  .header-lang{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    background:#1e3a8a;
-    color:white;
-    padding:6px 12px;
-    border-radius:6px;
-    font-size:14px;
-    width:85px;
-    height:36px;
-    text-align:center;
-  }
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#1e3a8a;
-    flex-direction:column;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-links a{
-    color:white;
-    padding:12px 0;
-    text-align:center;
-    font-size:16px;
-    border-bottom:1px solid rgba(255,255,255,0.2);
-  }
-
-  .nav-links .lang-btn{
-    background:white;
-    color:#1e3a8a;
-    font-weight:600;
-    border-radius:6px;
-    margin:15px auto;
-    width:120px;
-    border-bottom:none;
-  }
-}
-
 /* ===== GALLERY ===== */
 .gallery-grid{
   display:grid;
@@ -397,7 +281,6 @@ footer{
   border-radius:10px;
 }
 
-/* ===== HEADINGS ===== */
 h2{
   color:#1e3a8a;
   font-weight:700;
