@@ -28,6 +28,20 @@ main{
   box-sizing:border-box;
 }
 
+/* ====amche karya on the home page==== */
+.work-section {
+  padding: 60px 0;
+}
+
+.work-section h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.work-section ul {
+  padding-left: 20px;
+}
+
 /* ===== HEADER ===== */
 .main-header{
   background:white;
