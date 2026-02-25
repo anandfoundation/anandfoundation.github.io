@@ -12,3 +12,8 @@ function toggleMenu() {
     toggle.innerHTML = '<span class="hamburger"></span> मुख्य सूची';
   }
 }
+function switchToMarathi() {
+  const currentPath = window.location.pathname;
+  const marathiPath = currentPath.replace(/^\/en/, "");
+  window.location.href = marathiPath || "/";
+}
