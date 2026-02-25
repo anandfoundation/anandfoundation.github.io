@@ -34,6 +34,8 @@ main{ flex:1; }
 .main-header{
   background:white;
   border-bottom:1px solid #e5e7eb;
+   position: relative;
+  z-index: 1000;
 }
 
 .header-row{
