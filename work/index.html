@@ -12,35 +12,18 @@ html {
 }
 </style>
 </head>
+
+  
 <body>
 
-<header class="main-header">
-  <div class="container header-row">
-
-    <!-- Left: Brand -->
-    <div class="brand">
-      <img src="/images/logo/logo.jpeg" alt="आनंद फाउंडेशन लोगो">
-      <div class="brand-text">
-        <h1>आनंद फाउंडेशन</h1>
-        <span class="tagline">मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</span>
-      </div>
-    </div>
-
-    <!-- Menu Button (Mobile) -->
-    <div class="menu-toggle" id="menuToggle">☰ मुख्य सूची</div>
-
-    <!-- Navigation -->
-   <nav id="navbar" class="nav-links">
-  <a href="/">मुख्यपृष्ठ</a>
-  <a href="/about/">संस्थेविषयी</a>
-  <a href="/work/">कार्य</a>
-  <a href="/gallery/">गॅलरी</a>
-  <a href="/contact/">संपर्क</a>
-  <a href="/donate/">आपण कशी मदत करू शकता?</a>
-</nav>
-
-  </div>
-</header>
+<div id="header"></div>
+<script>
+fetch("/includes/header-mr.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 
   <main>
 <section class="prerna">
@@ -60,24 +43,16 @@ html {
 </section>
 </main>
 
-
-<footer>
-  <p>© आनंद फाउंडेशन</p>
-</footer>
+<div id="footer"></div>
 
 <script>
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navbar");
-
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
-
-  if(nav.classList.contains("show")){
-    toggle.textContent = "✖ बंद करा";
-  } else {
-    toggle.textContent = "☰ मुख्य सूची";
-  }
-});
+fetch("/includes/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 </script>
+
+<script src="/js/main.js"></script>
 </body>
 </html>
