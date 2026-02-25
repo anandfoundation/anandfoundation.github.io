@@ -1,20 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function (e) {
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navbar = document.getElementById("navbar");
+  if (e.target && e.target.id === "menuToggle") {
 
-  if (menuToggle && navbar) {
-    menuToggle.addEventListener("click", function () {
+    const navbar = document.getElementById("navbar");
 
+    if (navbar) {
       navbar.classList.toggle("active");
 
       if (navbar.classList.contains("active")) {
-        menuToggle.textContent = "बंद करा";
+        e.target.textContent = "बंद करा";
       } else {
-        menuToggle.textContent = "मुख्य सूची";
+        e.target.textContent = "मुख्य सूची";
       }
-
-    });
+    }
   }
 
 });
